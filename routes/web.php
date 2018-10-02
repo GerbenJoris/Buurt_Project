@@ -24,9 +24,6 @@ Route::get('/test', function () {
     \App\User::find(1)->assignRole('Admin');
 
 });
-Route::group(['middleware' => ['role:super-admin']], function () {
-    //
-});
 
 //    Voor hulp met de roleplugin
 //    https://github.com/spatie/laravel-permission#installation
