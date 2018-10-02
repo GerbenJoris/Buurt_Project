@@ -15,6 +15,24 @@
                     @endif
 
                     You are logged in!
+                        <br>
+                        @role('User', 'web')
+                        I am a user!
+                        @else
+                            I am not a User...
+                            @endrole
+                            <br>
+                            @role('RegisteredUser', 'web')
+                            I am a RegisteredUser!
+                            @else
+                                I am not a RegisteredUser...
+                                @endrole
+                                <br>
+                                @role('Admin', 'web')
+                                I am a Admin!
+                                @else
+                                    I am not an Admin...
+                                    @endrole
                 </div>
             </div>
         </div>

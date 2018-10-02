@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/test', function (){
+    \App\User::find(2)->assignRole('RegisteredUser');
+    \App\User::find(1)->assignRole('Admin');
+//    https://github.com/spatie/laravel-permission#installation
+});
